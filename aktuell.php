@@ -28,11 +28,11 @@
 <!-- GLEICHE NAVBAR WIE IN INDEX.HTML -->
 <nav id="navbar">
   <div id="nav-inner" class="nav-container">
-    <div class="nav-item">
-      <a href="./aktuell.html">Aktuell</a>
-    </div>
     <div class="nav-item active">
-      <a href="#">Worum geht's? <span class="arrow">▼</span></a>
+      <a href="./aktuell.php">Aktuell</span></a>
+    </div>
+    <div class="nav-item">
+      <a href="./index.php#">Worum geht's? <span class="arrow">▼</span></a>
       <div class="dropdown">
         <a href="#">Was tun wir?</a>
         <a href="#">Kletterpark-Vorhaben</a>
@@ -77,7 +77,7 @@
       </div>
     </div>
   </div>
-</nav>
+</nav>  
 
 <!-- MAIN MIT UNTERSCHIEDLICHEM INHALT IN #content -->
 <main id="main">

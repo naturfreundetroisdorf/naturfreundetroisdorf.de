@@ -85,7 +85,7 @@ letter-spacing: 0.02em;
 #ticker {
 position: relative;
 z-index: 2;
-background: var(--gruen-hell);
+background: rgb(102, 200, 17);
 color: #c0000a;
 font-weight: 600;
 font-size: 15px;

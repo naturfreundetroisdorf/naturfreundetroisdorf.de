@@ -27,7 +27,7 @@
 <nav id="navbar">
   <div id="nav-inner" class="nav-container">
     <div class="nav-item">
-      <a href="./aktuell.html">Aktuell</a>
+      <a href="./aktuell.php">Aktuell</a>
     </div>
     <div class="nav-item active">
       <a href="#">Worum geht's? <span class="arrow">▼</span></a>
