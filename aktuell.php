@@ -29,7 +29,7 @@ include('layout/header.php');
 </main>
 
 <!-- Vor dem schließenden </body>-Tag oder im <head> -->
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 <?php include('layout/footer.php'); ?>
 
 
