@@ -1,81 +1,9 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BI Naturfreunde Troisdorf</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div id="header">
-  <div id="header-overlay"></div>
-  <div id="header-inner">
-    <div id="logo">
-      <img src="https://static.wixstatic.com/media/12c2cd_530f2e46a0fb4d8bb5ef01ca4daada7d~mv2.jpg/v1/fill/w_305,h_444,al_c,q_80,enc_avif,quality_auto/12c2cd_530f2e46a0fb4d8bb5ef01ca4daada7d~mv2.jpg" alt="Logo Naturfreunde Troisdorf">
-    </div>
-    <div id="site-title">
-      <h1>BI&nbsp;Naturfreunde&nbsp;Troisdorf</h1>
-    </div>
-  </div>
-  <div id="ticker">
-    <span id="ticker-inner">+++ Achtung: Unsere wöchentlichen Naturfreundetreffen finden statt – alle sind herzlich eingeladen! +++ Schützt den Spicher Wald! +++ Hände weg vom Spicher Wald! +++ Informiert Euch und unterstützt uns! +++</span>
-  </div>
-</div>
-
-<nav id="navbar">
-  <div id="nav-inner" class="nav-container">
-    <div class="nav-item">
-      <a href="./aktuell.php">Aktuell</a>
-    </div>
-    <div class="nav-item active">
-      <a href="#">Worum geht's? <span class="arrow">▼</span></a>
-      <div class="dropdown">
-        <a href="#">Was tun wir?</a>
-        <a href="#">Kletterpark-Vorhaben</a>
-        <a href="#">Schießplatz Rottweil</a>
-        <a href="#">Sondermülldeponie SAD</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="#">Aktionen <span class="arrow">▼</span></a>
-      <div class="dropdown">
-        <a href="#">Kreisumweltausschuss 04.06.18</a>
-        <a href="#">StEA am 24.05.2018</a>
-        <a href="#">Infoveranstaltung 11.10.17</a>
-        <a href="#">Bürgerantrag 01.06.2017</a>
-        <a href="#">Offener Brief Stadtwerke</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="#">Was sagt die Presse? <span class="arrow">▼</span></a>
-      <div class="dropdown">
-        <a href="#">Kletterpark-Thematik</a>
-        <a href="#">Schießplatz-Thematik</a>
-        <a href="#">SAD-Thematik</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="#">Eindrücke</a>
-    </div>
-    <div class="nav-item">
-      <a href="#">Wer sind wir? <span class="arrow">▼</span></a>
-      <div class="dropdown">
-        <a href="#">Über uns</a>
-        <a href="#">ÜPS</a>
-        <a href="#">Mach' mit!</a>
-        <a href="#">Spende</a>
-      </div>
-    </div>
-    <div class="nav-item">
-      <a href="#">Kontakt <span class="arrow">▼</span></a>
-      <div class="dropdown">
-        <a href="#">Impressum</a>
-      </div>
-    </div>
-  </div>
-</nav>
+<?php
+$pageTitle = "BI Naturfreunde Troisdorf – Startseite";
+$currentPage = "index"; // Setzt das "Worum geht's?"-Item als aktiv
+include('layout/head.php');
+include('layout/header.php');
+?>
 
 <main id="main">
   <div id="content">
@@ -134,15 +62,6 @@
   </div>
 </main>
 
-<footer id="footer">
-  <div>© 2025 BI Naturfreunde Troisdorf · <a href="#">Impressum</a> · <a href="#">Kontakt</a></div>
-  <a href="https://www.facebook.com/umweltuebs/" target="_blank" class="footer-fb">
-    <div class="fb-icon">f</div>
-    Facebook
-  </a>
-</footer>
+<?php include('layout/footer.php'); ?>
 
 <script src="script.js"></script>
-
-</body>
-</html>

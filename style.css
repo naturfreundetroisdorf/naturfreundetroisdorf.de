@@ -85,7 +85,7 @@ letter-spacing: 0.02em;
 #ticker {
 position: relative;
 z-index: 2;
-background: rgb(102, 200, 17);
+background: var(--gruen-hell);
 color: #c0000a;
 font-weight: 600;
 font-size: 15px;
@@ -109,11 +109,11 @@ padding-left: 100%;
 
 /* NAVBAR */
 #navbar {
-background: var(--nav-bg);
-border-bottom: 3px solid var(--gruen);
-position: sticky;
-top: 0;
-z-index: 100;
+  background: var(--nav-bg);
+  border-bottom: 3px solid var(--gruen);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 #nav-inner {
@@ -185,9 +185,9 @@ transition: background 0.14s;
 
 /* MAIN CONTENT */
 #main {
-max-width: 1100px;
-margin: 0 auto;
-padding: 40px 24px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 0px 60px;
 }
 
 /* HERO TEXT AREA */
@@ -406,7 +406,6 @@ opacity: 0.3;
   width: 100%;
   background: #ffffff; /* Weißer Hintergrund wie im Original */
   border-bottom: 1px solid #e0e0e0; /* Leichte Unterstreichung */
-  padding: 0;
 }
 
 #nav-inner {
