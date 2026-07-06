@@ -3,14 +3,14 @@
     <div id="header-overlay"></div>
     <div id="header-inner">
       <div id="logo">
-        <img src="https://static.wixstatic.com/media/12c2cd_530f2e46a0fb4d8bb5ef01ca4daada7d~mv2.jpg/v1/fill/w_305,h_444,al_c,q_80,enc_avif,quality_auto/12c2cd_530f2e46a0fb4d8bb5ef01ca4daada7d~mv2.jpg" alt="Logo Naturfreunde Troisdorf">
+        <img src="../logo.avif" alt="Logo Naturfreunde Troisdorf">
       </div>
       <div id="site-title">
-        <h1>BI&nbsp;Naturfreunde&nbsp;Troisdorf</h1>
+        <h1>&nbspBI&nbsp;Naturfreunde&nbsp;Troisdorf</h1>
       </div>
     </div>
     <div id="ticker">
-      <span id="ticker-inner">+++ Achtung: Unsere wöchentlichen Naturfreundetreffen finden statt – alle sind herzlich eingeladen! +++ Schützt den Spicher Wald! +++ Hände weg vom Spicher Wald! +++ Informiert Euch und unterstützt uns! +++</span>
+      <span id="ticker-inner">Wir bauen unsere Website gerade um! Manche Seiten sind aktuell noch leer oder unvollständig – das ändert sich in Kürze. Danke für eure Geduld.</span>
     </div>
   </div>
 
