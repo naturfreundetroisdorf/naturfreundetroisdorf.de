@@ -1,11 +1,11 @@
 :root {
-    --wald: #2F5D3A;
-    --wald-dunkel: #1F3D27;
-    --moos: #547A55;
-    --holz: #B07D3C;
-    --sand: #F4F1E8;
-    --weiss: #FAFAF7;
-    --text: #243126;
+    --wald: #3A6B3E;        /* kräftiges Blattgrün, wie das helle Blattwerk im Sonnenlicht */
+    --wald-dunkel: #1E3A24; /* tiefes Schattengrün aus dem dichten Blätterdach */
+    --moos: #6B8F5A;        /* wärmeres, gelbstichigeres Moosgrün wie im Unterholz */
+    --holz: #9C6B35;        /* erdiger Braunton, angelehnt an den Waldweg im Bild */
+    --sand: #F5F2E7;        /* bleibt, passt gut als heller Kontrast */
+    --weiss: #FAFAF7;       /* bleibt */
+    --text: #223020;        /* minimal wärmer/dunkler für besseren Kontrast */
     --content-width: 1200px;
 }
 

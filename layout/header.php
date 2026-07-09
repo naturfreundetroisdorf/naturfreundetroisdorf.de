@@ -3,7 +3,7 @@
     <div id="header-overlay"></div>
     <div id="header-inner">
       <div id="logo">
-        <img src="./logo.avif" alt="Logo Naturfreunde Troisdorf">
+        <img src="<?php echo BASE_URL; ?>/logo.avif" alt="Logo Naturfreunde Troisdorf">
       </div>
       <div id="site-title">
         <h1>&nbspBI&nbsp;Naturfreunde&nbsp;Troisdorf</h1>
@@ -13,14 +13,13 @@
       <span id="ticker-inner">Wir bauen unsere Website gerade um! Manche Seiten sind aktuell noch leer oder unvollständig – das ändert sich in Kürze. Danke für eure Geduld.</span>
     </div>
   </div>
-
   <nav id="navbar">
     <div id="nav-inner" class="nav-container">
       <div class="nav-item <?php echo ($currentPage == 'aktuell' ? 'active' : ''); ?>">
-        <a href="aktuell.php">Aktuell</a>
+        <a href="<?php echo BASE_URL; ?>/aktuell.php">Aktuell</a>
       </div>
       <div class="nav-item <?php echo ($currentPage == 'index' ? 'active' : ''); ?>">
-        <a href="index.php">Worum geht's?</a>
+        <a href="<?php echo BASE_URL; ?>/index.php">Worum geht's?</a>
         <!--div class="dropdown">
           <a href="#">Was tun wir?</a>
           <a href="#">Kletterpark-Vorhaben</a>
@@ -29,7 +28,7 @@
         </div-->
       </div>
       <div class="nav-item <?php echo ($currentPage == 'aktionen' ? 'active' : ''); ?>">
-        <a href="aktionen.php">Aktionen</a>
+        <a href="<?php echo BASE_URL; ?>/aktionen.php">Aktionen</a>
         <!--div class="dropdown">
           <a href="#">Kreisumweltausschuss 04.06.18</a>
           <a href="#">StEA am 24.05.2018</a>
@@ -39,7 +38,7 @@
         </div-->
       </div>
       <div class="nav-item <?php echo ($currentPage == 'presse' ? 'active' : ''); ?>">
-        <a href="presse.php">Was sagt die Presse?</a>
+        <a href="<?php echo BASE_URL; ?>/presse.php">Was sagt die Presse?</a>
         <!--div class="dropdown">
           <a href="#">Kletterpark-Thematik</a>
           <a href="#">Schießplatz-Thematik</a>
@@ -47,10 +46,10 @@
         </div-->
       </div>
       <div class="nav-item <?php echo ($currentPage == 'eindruecke' ? 'active' : ''); ?>">
-        <a href="eindruecke.php">Eindrücke</a>
+        <a href="<?php echo BASE_URL; ?>/eindruecke.php">Eindrücke</a>
       </div>
       <div class="nav-item <?php echo ($currentPage == 'wir' ? 'active' : ''); ?>">
-        <a href="wir.php">Wer sind wir?</a>
+        <a href="<?php echo BASE_URL; ?>/wir.php">Wer sind wir?</a>
         <!--div class="dropdown">
           <a href="#">Über uns</a>
           <a href="#">ÜPS</a>
@@ -59,7 +58,7 @@
         </div-->
       </div>
       <div class="nav-item <?php echo ($currentPage == 'impressum' ? 'active' : ''); ?>">
-        <a href="impressum.php">Impressum</a>
+        <a href="<?php echo BASE_URL; ?>/impressum.php">Impressum</a>
         <!--div class="dropdown">
           <a href="#">Impressum</a>
         </div-->
