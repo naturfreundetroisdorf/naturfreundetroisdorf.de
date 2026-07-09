@@ -3,7 +3,7 @@
     <div id="header-overlay"></div>
     <div id="header-inner">
       <div id="logo">
-        <img src="../logo.avif" alt="Logo Naturfreunde Troisdorf">
+        <img src="./logo.avif" alt="Logo Naturfreunde Troisdorf">
       </div>
       <div id="site-title">
         <h1>&nbspBI&nbsp;Naturfreunde&nbsp;Troisdorf</h1>
