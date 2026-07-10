@@ -12,5 +12,4 @@ include('layout/header.php');
     </div>
 </main>
 
-<script src="js/script.js"></script>
 <?php include('layout/footer.php'); ?>

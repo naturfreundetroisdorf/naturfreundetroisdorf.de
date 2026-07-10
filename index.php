@@ -63,5 +63,3 @@ include('layout/header.php');
 </main>
 
 <?php include('layout/footer.php'); ?>
-
-<script src="script.js"></script>

@@ -3,7 +3,7 @@
 async function loadContent(url) {
   try {
     // Korrigiere den Pfad für lokale Dateien
-    let cleanUrl = url.replace(/^\.\//, '');
+    let cleanUrl = url.replace(/^\.\//, ''); 
 
     const response = await fetch(cleanUrl);
     if (!response.ok) throw new Error('Seite nicht gefunden');

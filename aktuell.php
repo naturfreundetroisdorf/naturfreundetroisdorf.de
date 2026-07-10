@@ -53,6 +53,5 @@ $posts = $stmt->fetchAll();
   </div>
 </main>
 <!-- Vor dem schließenden </body>-Tag oder im <head> -->
-<script src="<?php echo BASE_URL; ?>/js/script.js"></script>
 <?php include('layout/footer.php'); ?>
 </html>

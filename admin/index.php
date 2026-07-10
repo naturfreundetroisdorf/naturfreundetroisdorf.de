@@ -14,14 +14,16 @@ $posts = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Naturfreunde CMS</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"> 
 </head>
 <body class="admin-body">
     <div class="admin">
         <div style="display:flex;justify-content:space-between;align-items:center;">
             <h1>Naturfreunde CMS</h1>
+            <a href="../team/">→ Team</a>
             <a href="logout.php">Abmelden</a>
-        </div>        
+
+        </div> 
         <p>
             <a href="neu.php">➕ Neuer Beitrag</a>
         </p>
