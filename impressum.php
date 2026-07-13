@@ -17,8 +17,7 @@ include('layout/header.php');
 <p>
 
 <strong>Bürgerinitiative Naturfreunde Troisdorf</strong><br>
-Unser Wald – Unser Leben<br><br>
-
+<br><br>
 Ansprechpartner:<br>
 Gerd Bücher<br>
 Im Kreuzfeld 5<br>

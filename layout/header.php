@@ -57,6 +57,12 @@
           <a href="#">Spende</a>
         </div-->
       </div>
+      <div class="nav-item <?php echo ($currentPage == 'podcast' ? 'active' : ''); ?>">
+        <a>Podcast</a>
+          <div class="dropdown">
+            <a href="<?php echo BASE_URL; ?>/podcast">Aktueller Podcast gegen die Aufweitung der Deponiestraße</a>
+          </div>
+      </div>
       <div class="nav-item <?php echo ($currentPage == 'impressum' ? 'active' : ''); ?>">
         <a href="<?php echo BASE_URL; ?>/impressum.php">Impressum</a>
         <!--div class="dropdown">
