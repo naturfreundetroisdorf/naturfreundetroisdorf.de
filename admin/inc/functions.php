@@ -48,3 +48,44 @@ function uploadImage(array $file): ?string
 
     return $filename;
 }
+
+function formatContent($text)
+{
+    // Platzhalter für manuelle Links
+    $links = [];
+
+    $text = preg_replace_callback(
+        '/\[LINK:(https?:\/\/[^\|\]]+)(?:\|([^\]]+))?\]/i',
+        function ($matches) use (&$links) {
+
+            $url = htmlspecialchars($matches[1], ENT_QUOTES, 'UTF-8');
+            $label = htmlspecialchars($matches[2] ?? $matches[1], ENT_QUOTES, 'UTF-8');
+
+            $placeholder = '###LINK' . count($links) . '###';
+
+            $links[$placeholder] =
+                '<a href="' . $url . '" target="_blank" rel="noopener noreferrer">'
+                . $label .
+                '</a>';
+
+            return $placeholder;
+        },
+        $text
+    );
+
+    // Jetzt erst alles escapen
+    $text = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+    
+
+    // Normale URLs verlinken
+    $text = preg_replace(
+        '~(https?://[^\s<]+)~i',
+        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>',
+        $text
+    );
+
+    // Platzhalter wieder einsetzen
+    $text = str_replace(array_keys($links), array_values($links), $text);
+
+    return nl2br($text);
+}

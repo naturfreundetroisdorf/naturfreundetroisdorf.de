@@ -3,6 +3,7 @@ $pageTitle = "BI Naturfreunde Troisdorf – Aktuelles";
 $currentPage = "aktuell";
 include('layout/head.php');
 include('layout/header.php');
+require_once __DIR__ . '/admin/inc/functions.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/../config/config.php';
 $stmt = $pdo->query("
     SELECT *
@@ -43,7 +44,7 @@ $posts = $stmt->fetchAll();
       <small>
           <?= date('d.m.Y', strtotime($post['created_at'])) ?>
       </small>
-      <p><?= nl2br(htmlspecialchars($post['content'])) ?></p>
+      <p><?= formatContent($post['content']) ?></p>
   </div>
   <hr class="divider">
   <?php endforeach; ?>

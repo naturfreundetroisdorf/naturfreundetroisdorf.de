@@ -29,7 +29,12 @@ include('layout/header.php');
     </div>
 
     <div class="roadmap-item done">
-        <span class="roadmap-text">Adminbereich für "Was sagt die Presse" damit unabhängig Artikel gepostet werden können</span>
+        <span class="roadmap-text">Adminbereich für "Was sagt die Presse" damit unabhängig Artikel veröffentlicht werden können</span>
+        <span class="roadmap-check"></span>
+    </div>
+
+        <div class="roadmap-item done">
+        <span class="roadmap-text">Adminbereich für "Aktionen" damit unabhängig geplante Aktionen veröffentlicht werden können</span>
         <span class="roadmap-check"></span>
     </div>
 
