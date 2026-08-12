@@ -1,0 +1,35 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up job
+        run: echo "Starting deployment to production..."
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PROD_DEPLOY_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H 202.61.233.135 >> ~/.ssh/known_hosts
+
+      - name: Deploy to Production Server
+        run: |
+          ssh -i ~/.ssh/deploy_key hosting217654@202.61.233.135 << 'EOF'
+          cd /bi-naturfreundetroisdorf.de/httpdocs
+          git pull origin main
+          echo "Production deployment successful!"
+          EOF
+
+      - name: Cleanup SSH
+        run: rm -rf ~/.ssh/deploy_key
