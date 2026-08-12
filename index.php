@@ -55,8 +55,8 @@ include('layout/header.php');
       Wollen wir uns das gefallen lassen? <strong>Wir Naturfreunde meinen 'NEIN'!</strong><br>
       Der Wald braucht wieder eine Lobby. Informiert Euch und unterstützt uns bei unserer Arbeit...</p>
     </div>
-  <!-- test  5-->
 
+    <p>test</p>
   </div>
   
 </main>
