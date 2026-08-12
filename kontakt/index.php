@@ -38,7 +38,7 @@ include('../layout/header.php');
 
     <!-- Rechte Spalte: Bild -->
     <div id="kontakt-image">
-      <img src="<?php echo BASE_URL; ?>/images/herzkontakt.jpg" alt="Naturfreunde Herz">
+      <img src="<?php echo BASE_URL; ?>/kontakt/images/herzkontakt.jpg" alt="Naturfreunde Herz">
     </div>
 
   </div>
