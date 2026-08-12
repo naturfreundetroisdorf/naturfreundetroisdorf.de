@@ -13,7 +13,6 @@ function uploadImage(array $file): ?string
 
     // Ist es wirklich ein Bild?
     $imageInfo = getimagesize($file['tmp_name']);
-
     if ($imageInfo === false) {
         throw new Exception("Die Datei ist kein gültiges Bild.");
     }
@@ -30,15 +29,63 @@ function uploadImage(array $file): ?string
     }
 
     $extension = $allowed[$imageInfo['mime']];
-    $filename = bin2hex(random_bytes(16)) . "." . $extension;
+    $filename  = bin2hex(random_bytes(16)) . '.' . $extension;
 
-    $destination = $_SERVER['DOCUMENT_ROOT'] .
-        "/uploads/images/" .
-        $filename;
+    // Projekt-Root ermitteln (functions.php liegt in admin/inc/)
+    $siteRootFs = realpath(__DIR__ . '/../..');
+
+    $destinationDir = $siteRootFs . '/uploads/images/';
+
+    if (!is_dir($destinationDir)) {
+        mkdir($destinationDir, 0755, true);
+    }
+
+    $destination = $destinationDir . $filename;
 
     if (!move_uploaded_file($file['tmp_name'], $destination)) {
         throw new Exception("Das Bild konnte nicht gespeichert werden.");
     }
 
     return $filename;
+}
+
+function formatContent($text)
+{
+    // Platzhalter für manuelle Links
+    $links = [];
+
+    $text = preg_replace_callback(
+        '/\[LINK:(https?:\/\/[^\|\]]+)(?:\|([^\]]+))?\]/i',
+        function ($matches) use (&$links) {
+
+            $url = htmlspecialchars($matches[1], ENT_QUOTES, 'UTF-8');
+            $label = htmlspecialchars($matches[2] ?? $matches[1], ENT_QUOTES, 'UTF-8');
+
+            $placeholder = '###LINK' . count($links) . '###';
+
+            $links[$placeholder] =
+                '<a href="' . $url . '" target="_blank" rel="noopener noreferrer">'
+                . $label .
+                '</a>';
+
+            return $placeholder;
+        },
+        $text
+    );
+
+    // Jetzt erst alles escapen
+    $text = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+    
+
+    // Normale URLs verlinken
+    $text = preg_replace(
+        '~(https?://[^\s<]+)~i',
+        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>',
+        $text
+    );
+
+    // Platzhalter wieder einsetzen
+    $text = str_replace(array_keys($links), array_values($links), $text);
+
+    return nl2br($text);
 }

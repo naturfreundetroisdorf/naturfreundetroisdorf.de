@@ -1,9 +1,9 @@
 <?php
 $pageTitle = "Impressum";
-$currentPage = "impressum";
+$currentPage = "kontakt";
 
-include('layout/head.php');
-include('layout/header.php');
+include('../layout/head.php');
+include('../layout/header.php');
 ?>
 
 <main id="main">
@@ -17,8 +17,7 @@ include('layout/header.php');
 <p>
 
 <strong>Bürgerinitiative Naturfreunde Troisdorf</strong><br>
-Unser Wald – Unser Leben<br><br>
-
+<br><br>
 Ansprechpartner:<br>
 Gerd Bücher<br>
 Im Kreuzfeld 5<br>
@@ -88,4 +87,4 @@ sofern nicht anders gekennzeichnet.
 
 </main>
 
-<?php include('layout/footer.php'); ?>
+<?php include('../layout/footer.php'); ?>

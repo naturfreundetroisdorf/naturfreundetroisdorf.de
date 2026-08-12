@@ -1,4 +1,4 @@
-﻿# Keys
+# Keys
 deploy_key_prod
 deploy_key_prod.pub
 
@@ -8,3 +8,5 @@ deploy_key_prod.pub
 # OS
 .DS_Store
 Thumbs.db
+=======
+.vscode/

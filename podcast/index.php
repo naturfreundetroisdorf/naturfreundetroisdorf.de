@@ -1,25 +1,9 @@
 <?php
-$pageTitle = "Podcast";
+$pageTitle = "BI Naturfreunde Troisdorf – Aktionen";
+$currentPage = "podcast"; // Setzt das "Worum geht's?"-Item als aktiv
 include('../layout/head.php');
+include('../layout/header.php');
 ?>
-
-<header id="header">
-
-    <div id="header-inner">
-
-        <div id="logo">
-            <a href="/">
-                <img src="../logo.avif" alt="Naturfreunde">
-            </a>
-        </div>
-
-        <div id="site-title">
-            <h1>BI Naturfreunde Troisdorf</h1>
-        </div>
-
-    </div>
-
-</header>
 
 <main id="main">
 

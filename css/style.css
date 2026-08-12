@@ -1,11 +1,11 @@
 :root {
-    --wald: #2F5D3A;
-    --wald-dunkel: #1F3D27;
-    --moos: #547A55;
-    --holz: #B07D3C;
-    --sand: #F4F1E8;
-    --weiss: #FAFAF7;
-    --text: #243126;
+    --wald: #3A6B3E;        /* kräftiges Blattgrün, wie das helle Blattwerk im Sonnenlicht */
+    --wald-dunkel: #1E3A24; /* tiefes Schattengrün aus dem dichten Blätterdach */
+    --moos: #6B8F5A;        /* wärmeres, gelbstichigeres Moosgrün wie im Unterholz */
+    --holz: #9C6B35;        /* erdiger Braunton, angelehnt an den Waldweg im Bild */
+    --sand: #F5F2E7;        /* bleibt, passt gut als heller Kontrast */
+    --weiss: #FAFAF7;       /* bleibt */
+    --text: #223020;        /* minimal wärmer/dunkler für besseren Kontrast */
     --content-width: 1200px;
 }
 
@@ -46,7 +46,7 @@ body {
       rgba(20,45,25,0.65),
       rgba(20,45,25,0.35)
     ),
-    url('../headbackground.jpg');
+    url('../headbackground3.jpg');
 
   background-position: center center;
   background-size: cover;
@@ -86,7 +86,7 @@ body {
 #site-title::after {
 
     content:
-    "Für den Schutz unserer Wälder und unserer Heimat";
+    "engagiert für den Schutz und Erhalt des Spicher Waldes und auch die Natur um uns herum";
 
     display:block;
 
@@ -203,18 +203,18 @@ transition: background 0.14s;
 /* HERO TEXT AREA */
 #hero-text {
 
-background:white;
+    background:white;
 
-border-left:
-5px solid var(--wald);
+    border-left:
+    5px solid var(--wald);
 
-box-shadow:
-0 4px 20px rgba(0,0,0,.08);
+    box-shadow:
+    0 4px 20px rgba(0,0,0,.08);
 
-border-radius:12px;
+    border-radius:12px;
 
-text-align:left;
-
+    text-align:left;
+    padding: 20px 25px;  /* Innenabstand hinzufügen */
 }
 
 /* TWO-COLUMN LAYOUT */
@@ -844,4 +844,199 @@ opacity: 0.3;
 
     }
 
+}
+ 
+/* ===========================
+   TEAM
+=========================== */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.team-card{
+
+    display:flex;
+
+    gap:20px;
+
+    background:#f8f7ef;
+
+    border:1px solid #d7d7d7;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    align-items:flex-start;
+
+}
+
+.team-image img{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+    flex-shrink:0;
+
+}
+
+.team-content{
+
+    flex:1;
+
+}
+
+.team-content h3{
+
+    margin-bottom:12px;
+
+    color:var(--wald);
+
+    font-size:24px;
+
+    font-family:'Playfair Display', serif;
+
+}
+
+.team-content p{
+
+    line-height:1.6;
+
+    text-align:justify;
+
+}
+
+@media(max-width:768px){
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card{
+
+        flex-direction:column;
+
+    }
+
+    .team-image img{
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+}
+
+.roadmap {
+    max-width: 900px;
+}
+
+.roadmap h3 {
+    margin-top: 40px;
+    color: #3f6d39;
+}
+
+.roadmap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    margin: 10px 0;
+    background: #f6f6f6;
+    border-left: 5px solid #6b8f58;
+    border-radius: 8px;
+}
+
+.roadmap-check {
+    font-size: 24px;
+    color: #bbb;
+}
+
+.roadmap-item.done .roadmap-check {
+    color: #3aa34a;
+}
+
+.roadmap-item p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   KONTAKT SEITE
+========================================== */
+
+#kontakt-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+#kontakt-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--wald-dunkel);
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.kontakt-person {
+  margin-bottom: 35px;
+}
+
+.kontakt-person h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--wald);
+  margin-bottom: 10px;
+}
+
+.kontakt-person p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.kontakt-person a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.kontakt-person a:hover {
+  text-decoration: underline;
+}
+
+#kontakt-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #kontakt-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+  }
 }
