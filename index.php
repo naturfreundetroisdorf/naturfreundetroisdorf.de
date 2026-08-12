@@ -8,11 +8,12 @@ include('layout/header.php');
 <main id="main">
   <div id="content">
     <div id="hero-text">
-      <h2>Wir, die <a href="#">'Bürgerinitiative Naturfreunde Troisdorf'</a>, sind eine
-      <span class="rot">überparteiliche</span> Gruppe von Troisdorfer Bürgern,
-      die sich für den Schutz und den Erhalt des 'Spicher Waldes' einsetzen.</h2>
+      <h3>Wir, die Bürgerinitiative Naturfreunde Troisdorf, sind eine
+      überparteiliche Gruppe von Troisdorfer Bürgern,
+      die sich für den Schutz und den Erhalt des 'Spicher Waldes' einsetzen.</h3>
       <p>Unser schönes Landschaftsschutzgebiet, an der östlichen Stadtgrenze von Troisdorf zur Wahner Heide, ist ein wertvolles Juwel und unverzichtbar für Mensch, Tier und Umwelt.</p>
     </div>
+    <br>
 
     <div id="content-grid">
       <div>
@@ -24,13 +25,12 @@ include('layout/header.php');
           <li>Der Wald ist Naherholungsgebiet.</li>
           <li>Er bietet ein angenehmes, ausgleichendes Kleinklima.</li>
           <li>Der Wald ermöglicht Entspannung durch pures Naturerlebnis.</li>
-          <li>Er bietet Raum für <em>kostenlose</em> Freizeitgestaltung.</li>
           <li>Er ist Lebens- und Schutzraum für Tiere und Pflanzen.</li>
-          <li>Der Wald erhöht die Lebens- und Wohnattraktivität.</li>
+          <li>Der Wald erhöht die Lebensqualität und Wohnattraktivität in unserem Stadtgebiet.</li>
           <li>Er bietet Lärmschutz und fungiert als Feinstaubfilter.</li>
-          <li>Er verhindert Starkregenschäden (Wasser im Keller).</li>
-          <li>Er reduziert den Grundwasserstand im Anrainerbezirk.</li>
-          <li>Er ist Pufferzone für die 'Wahner Heide' und schützt sie vor Überfrequentierung.</li>
+          <li>Der Wald wirkt als natürlicher Wasserspeicher und Hochwasserschutz, indem er Niederschläge verzögert, speichert und reinigt.</li>
+          <li>Dadurch wird der Grundwasserstand im Anrainerbezirk reduziert und Starkregenschäden verhindert  (Wasser im Keller).</li>
+          <li>Er ist Pufferzone und Umgebungsschutzgebiet für die 'Wahner Heide' und schützt sie vor Überfrequentierung.</li>
         </ul>
       </div>
     </div>
@@ -41,13 +41,13 @@ include('layout/header.php');
       <h3>Hier die Fakten im Einzelnen:</h3>
 
       <h4>1. Die Giftmülldeponie SAD</h4>
-      <p>In unserem schönen Waldgebiet befindet sich, zum allgemeinen Leidwesen, seit vielen Jahrzehnten die SAD, eine 27 ha große Giftmülldeponie für mineralischen Sondermüll der Deponieklasse III. <a href="#">weiterlesen</a></p>
+      <p>In unserem schönen Waldgebiet befindet sich, zum allgemeinen Leidwesen, seit vielen Jahrzehnten die SAD, eine 27 ha große Giftmülldeponie für mineralischen Sondermüll der Deponieklasse III. <a href="https://www.naturfreundetroisdorf.de/kopie-von-aktionen-1">weiterlesen</a></p>
 
       <h4>2. Ehemaliger 'Schießstand Rottweil'</h4>
-      <p>Ende 2017 sind dort 3,6 ha Wald gerodet worden, um den bleiverseuchten Boden auszutauschen. Aus finanziellen Gründen sollen aber lediglich 2,6 ha wieder aufgeforstet werden. <a href="#">weiterlesen</a></p>
+      <p>Ende 2017 sind dort 3,6 ha Wald gerodet worden, um den bleiverseuchten Boden auszutauschen. Aus finanziellen Gründen sollen aber lediglich 2,6 ha wieder aufgeforstet werden. <a href="https://www.naturfreundetroisdorf.de/schiessplatz-rottweil">weiterlesen</a></p>
 
       <h4>3. Geplanter Kletterwald auf den 'Spicher Höhen'</h4>
-      <p>In einem Waldgebiet von ungefähr 2 ha (Ecke Asselbachstrasse/Mauspfad) hat die Stadt Troisdorf einem Investor bereits vertraglich die Zusage zur Errichtung eines Kletterparks erteilt. Hierfür müssten viele Bäume gefällt werden... <a href="#">weiterlesen</a></p>
+      <p>In einem Waldgebiet von ungefähr 2 ha (Ecke Asselbachstrasse/Mauspfad) hat die Stadt Troisdorf einem Investor bereits vertraglich die Zusage zur Errichtung eines Kletterparks erteilt. Hierfür müssten viele Bäume gefällt werden... <a href="https://www.naturfreundetroisdorf.de/kletterwald">weiterlesen</a></p>
     </div>
 
     <div id="cta">
@@ -56,9 +56,6 @@ include('layout/header.php');
       Der Wald braucht wieder eine Lobby. Informiert Euch und unterstützt uns bei unserer Arbeit...</p>
     </div>
 
-    <div id="top-btn-wrap">
-      <a href="#" id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Seitenanfang</a>
-    </div>
   </div>
 </main>
 

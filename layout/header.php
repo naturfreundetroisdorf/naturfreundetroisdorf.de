@@ -22,28 +22,35 @@
         <a href="<?php echo BASE_URL; ?>/index.php">Worum geht's?</a>
       </div>
       <div class="nav-item <?php echo ($currentPage == 'aktionen' ? 'active' : ''); ?>">
-        <a href="<?php echo BASE_URL; ?>/aktionen.php">Aktionen</a>
+        <a href="<?php echo BASE_URL; ?>/aktionen">Aktionen</a>
       </div>
+
       <div class="nav-item <?php echo ($currentPage == 'presse' ? 'active' : ''); ?>">
         <a href="<?php echo BASE_URL; ?>/presse.php">Was sagt die Presse?</a>
+          <div class="dropdown">
+            <a target="_blank" href="https://www.ksta.de/region/rhein-sieg-bonn/troisdorf/troisdorf-mehrheit-bewilligt-geld-fuer-deponiestrasse-1271875">Troisdorf Mehrheit bewilligt Geld für Deponiestraße 1271875</a>
+          </div>
       </div>
+<!--
       <div class="nav-item <?php echo ($currentPage == 'eindruecke' ? 'active' : ''); ?>">
         <a href="<?php echo BASE_URL; ?>/eindruecke.php">Eindrücke</a>
       </div>
+
+-->
       <div class="nav-item <?php echo ($currentPage == 'wir' ? 'active' : ''); ?>">
         <a href="<?php echo BASE_URL; ?>/wir.php">Wer sind wir?</a>
       </div>
       <div class="nav-item <?php echo ($currentPage == 'podcast' ? 'active' : ''); ?>">
         <a>Podcast</a>
           <div class="dropdown">
-            <a href="<?php echo BASE_URL; ?>/podcast">podcast</a>
+            <a href="<?php echo BASE_URL; ?>/podcast">Aktueller Podcast gegen die Aufweitung der Deponiestraße</a>
           </div>
       </div>
-      <div class="nav-item <?php echo ($currentPage == 'impressum' ? 'active' : ''); ?>">
-        <a href="<?php echo BASE_URL; ?>/impressum.php">Impressum</a>
-        <!--div class="dropdown">
-          <a href="#">Impressum</a>
-        </div-->
+      <div class="nav-item <?php echo ($currentPage == 'kontakt' ? 'active' : ''); ?>">
+        <a href="<?php echo BASE_URL; ?>/kontakt">Kontakt</a>
+        <div class="dropdown">
+          <a href="<?php echo BASE_URL; ?>/kontakt/impressum.php">Impressum</a>
+        </div>
       </div>
     </div>
   </nav>

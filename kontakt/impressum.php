@@ -1,9 +1,9 @@
 <?php
 $pageTitle = "Impressum";
-$currentPage = "impressum";
+$currentPage = "kontakt";
 
-include('layout/head.php');
-include('layout/header.php');
+include('../layout/head.php');
+include('../layout/header.php');
 ?>
 
 <main id="main">
@@ -87,4 +87,4 @@ sofern nicht anders gekennzeichnet.
 
 </main>
 
-<?php include('layout/footer.php'); ?>
+<?php include('../layout/footer.php'); ?>

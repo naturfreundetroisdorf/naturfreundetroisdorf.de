@@ -86,7 +86,7 @@ body {
 #site-title::after {
 
     content:
-    "Für den Schutz unserer Wälder";
+    "engagiert für den Schutz und Erhalt des Spicher Waldes und auch die Natur um uns herum";
 
     display:block;
 
@@ -203,18 +203,18 @@ transition: background 0.14s;
 /* HERO TEXT AREA */
 #hero-text {
 
-background:white;
+    background:white;
 
-border-left:
-5px solid var(--wald);
+    border-left:
+    5px solid var(--wald);
 
-box-shadow:
-0 4px 20px rgba(0,0,0,.08);
+    box-shadow:
+    0 4px 20px rgba(0,0,0,.08);
 
-border-radius:12px;
+    border-radius:12px;
 
-text-align:left;
-
+    text-align:left;
+    padding: 20px 25px;  /* Innenabstand hinzufügen */
 }
 
 /* TWO-COLUMN LAYOUT */
