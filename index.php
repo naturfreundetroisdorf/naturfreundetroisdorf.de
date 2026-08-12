@@ -56,7 +56,6 @@ include('layout/header.php');
       Der Wald braucht wieder eine Lobby. Informiert Euch und unterstützt uns bei unserer Arbeit...</p>
     </div>
 
-    <p>test</p>
   </div>
   
 </main>
