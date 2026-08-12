@@ -974,3 +974,69 @@ opacity: 0.3;
     font-size: 0.9rem;
     line-height: 1.5;
 }
+
+/* ==========================================
+   KONTAKT SEITE
+========================================== */
+
+#kontakt-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+#kontakt-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--wald-dunkel);
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.kontakt-person {
+  margin-bottom: 35px;
+}
+
+.kontakt-person h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--wald);
+  margin-bottom: 10px;
+}
+
+.kontakt-person p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.kontakt-person a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.kontakt-person a:hover {
+  text-decoration: underline;
+}
+
+#kontakt-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.15);
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #kontakt-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+}
