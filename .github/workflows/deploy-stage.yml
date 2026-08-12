@@ -1,0 +1,33 @@
+name: Deploy to Stage
+
+on:
+  push:
+    branches:
+      - stage
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.STAGE_DEPLOY_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H 202.61.233.135 >> ~/.ssh/known_hosts 2>/dev/null
+      
+      - name: Deploy to Stage Server
+        run: |
+          ssh -i ~/.ssh/deploy_key hosting217654@202.61.233.135 << 'EOF'
+          cd /andrehenrici.de/httpdocs/naturfreunde-test
+          git pull origin stage
+          echo "✅ Stage deployment successful!"
+          EOF
+      
+      - name: Cleanup SSH
+        if: always()
+        run: rm -rf ~/.ssh
