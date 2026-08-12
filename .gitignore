@@ -1,0 +1,10 @@
+﻿# Keys
+deploy_key_prod
+deploy_key_prod.pub
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
