@@ -25,7 +25,17 @@ include('layout/header.php');
 
     <div class="roadmap-item done">
         <span class="roadmap-text">Inhalt von "Worum geht´s bearbeiten" </span>
-        <span class="roadmap-check"></span>
+        <span class="roadmap-check">✔</span>
+    </div>
+
+    <div class="roadmap-item done">
+        <span class="roadmap-text">Diverse Änderungen von Gerd</span>
+        <span class="roadmap-check">In Bearbeitung</span>
+    </div>
+
+    <div class="roadmap-item done">
+        <span class="roadmap-text">Diverse Änderungen von Sabine und Beate</span>
+        <span class="roadmap-check">In Bearbeitung</span>
     </div>
 
     <div class="roadmap-item done">

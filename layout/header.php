@@ -2,11 +2,12 @@
   <div id="header">
     <div id="header-overlay"></div>
     <div id="header-inner">
+      <div id="site-title">
+        <h1>&nbsp;BI&nbsp;Naturfreunde&nbsp;Troisdorf</h1>
+        <p>&nbsp;&nbsp;&nbspWir engagieren uns für unserere Umwelt</p>
+      </div>
       <div id="logo">
         <img src="<?php echo BASE_URL; ?>/logo.avif" alt="Logo Naturfreunde Troisdorf">
-      </div>
-      <div id="site-title">
-        <h1>&nbspBI&nbsp;Naturfreunde&nbsp;Troisdorf</h1>
       </div>
     </div>
     <div id="ticker">
@@ -22,11 +23,11 @@
         <a href="<?php echo BASE_URL; ?>/index.php">Worum geht's?</a>
       </div>
       <div class="nav-item <?php echo ($currentPage == 'aktionen' ? 'active' : ''); ?>">
-        <a href="<?php echo BASE_URL; ?>/aktionen">Aktionen</a>
+        <a href="<?php echo BASE_URL; ?>/aktionen">Bisherige Aktionen</a>
       </div>
 
       <div class="nav-item <?php echo ($currentPage == 'presse' ? 'active' : ''); ?>">
-        <a href="<?php echo BASE_URL; ?>/presse.php">Was sagt die Presse?</a>
+        <a>Pressebeiträge</a>
           <div class="dropdown">
             <a target="_blank" href="https://www.ksta.de/region/rhein-sieg-bonn/troisdorf/troisdorf-mehrheit-bewilligt-geld-fuer-deponiestrasse-1271875">Troisdorf Mehrheit bewilligt Geld für Deponiestraße 1271875</a>
           </div>
@@ -41,16 +42,10 @@
         <a href="<?php echo BASE_URL; ?>/wir.php">Wer sind wir?</a>
       </div>
       <div class="nav-item <?php echo ($currentPage == 'podcast' ? 'active' : ''); ?>">
-        <a>Podcast</a>
-          <div class="dropdown">
-            <a href="<?php echo BASE_URL; ?>/podcast">Aktueller Podcast gegen die Aufweitung der Deponiestraße</a>
-          </div>
+        <a href="<?php echo BASE_URL; ?>/podcast">Podcast</a>
       </div>
       <div class="nav-item <?php echo ($currentPage == 'kontakt' ? 'active' : ''); ?>">
-        <a href="<?php echo BASE_URL; ?>/kontakt">Kontakt</a>
-        <div class="dropdown">
-          <a href="<?php echo BASE_URL; ?>/kontakt/impressum.php">Impressum</a>
-        </div>
+        <a href="<?php echo BASE_URL; ?>/kontakt/impressum.php">Impressum</a>
       </div>
     </div>
   </nav>
