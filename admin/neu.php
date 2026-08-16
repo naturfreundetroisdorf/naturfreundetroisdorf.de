@@ -17,8 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }    }
     // Youtube-ID speichern
     if ($type === 'video') {
-        $youtube = trim($_POST['youtube']);
+    $youtube = extractYoutubeId($_POST['youtube']);
+    if ($youtube === null) {
+        die('Ungültiger YouTube-Link.');
     }
+}
     $stmt = $pdo->prepare("
         INSERT INTO " . POSTS_TABLE . "
         (

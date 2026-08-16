@@ -20,7 +20,7 @@ include('layout/header.php');
         <img class="content-img" src="https://static.wixstatic.com/media/12c2cd_083cf75a2b304322a9d340c346e05760~mv2_d_2322_4128_s_2.jpg/v1/crop/x_0,y_534,w_2322,h_3088/fill/w_466,h_621,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/12c2cd_083cf75a2b304322a9d340c346e05760~mv2_d_2322_4128_s_2.jpg" alt="Spicher Wald" style="max-height: 420px;">
       </div>
       <div id="benefits">
-        <h3>Worin liegt sein besonderer Nutzen?</h3>
+        <h3>Argumente für den Erhalt unseres Waldes</h3>
         <ul>
           <li>Der Wald ist Naherholungsgebiet.</li>
           <li>Er bietet ein angenehmes, ausgleichendes Kleinklima.</li>

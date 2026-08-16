@@ -89,3 +89,19 @@ function formatContent($text)
 
     return nl2br($text);
 }
+
+function extractYoutubeId($input) {
+    $input = trim($input);
+
+    // Falls schon nur die ID eingegeben wurde (11 Zeichen, keine URL)
+    if (preg_match('/^[a-zA-Z0-9_-]{11}$/', $input)) {
+        return $input;
+    }
+
+    // Deckt youtube.com/watch?v=, youtu.be/, youtube.com/embed/, youtube.com/shorts/ ab
+    if (preg_match('~(?:youtube\.com/(?:watch\?v=|embed/|shorts/)|youtu\.be/)([a-zA-Z0-9_-]{11})~', $input, $matches)) {
+        return $matches[1];
+    }
+
+    return null; // ungültige/unbekannte URL
+}

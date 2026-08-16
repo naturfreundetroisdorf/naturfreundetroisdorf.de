@@ -33,11 +33,14 @@ $posts = $stmt->fetchAll();
       <?php endif; ?>
       <?php if($post['type'] === 'video'): ?>
           <div class="video-wrapper">
-              <iframe
-                  src="https://www.youtube.com/embed/<?= htmlspecialchars($post['youtube_id']) ?>"
-                  title="<?= htmlspecialchars($post['title']) ?>"
-                  allowfullscreen>
-              </iframe>
+               <iframe
+                    src="https://www.youtube.com/embed/<?= htmlspecialchars($post['youtube_id']) ?>"
+                    title="<?= htmlspecialchars($post['title']) ?>"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
           </div>
       <?php endif; ?>
       <h3><?= htmlspecialchars($post['title']) ?></h3>
