@@ -19,6 +19,20 @@ include('../layout/header.php');
         allowfullscreen
         loading="lazy"></iframe>
     </div>
+    <h2>Bürgerinitiative Naturfreunde Troisdorf - Schutz und Erhalt des Spicher Waldes</h2>
+    <p>Aktueller Film gegen die Aufweitung der Deponiestraße</p>
+
+    <p>Der Film erzählt die Geschichte der Bürgerinitiative Naturfreunde Troisdorf zum Schutz und Erhalt des Spicher Waldes gegen den Ausbau des Alten Mauspfades - Deponiestraße ab 2007,
+    den bürgerlichen Protest gegen den europaweiten Sondermülltourismus um die Sondermülldeponie ab 2009, den Protest zum Schutz des Spicher Waldes gegen den Kletterpark zw. 2015–2024
+    und zum wiederholten und aktuell gewordenen Vorhaben des Troisdorfer Stadtrates 2023-2026, wieder die Deponiestraße aufzuweiten.</p>
+
+    <p>Im Mittelpunkt steht stets der Schutz und Erhalt des Spicher Waldes als Naherholungs- und Landschaftsschutzgebiet.
+    Die Bürgerinitiative warnt vor ökologischen Schäden und zweifelt an einer echten Verkehrsentlastung der B8.
+    Statt der geplanten Straße bringt sie eigene Vorschläge zur Verkehrsoptimierung ins Gespräch.
+    Auch stadtpolitische Themen wie das Haushaltssicherungskonzept und der drohende Wegfall sozialer Zuschüsse,
+    während gleichzeitig Millionen in ein umstrittenes Straßenprojekt fließen sollen, kommen zur Sprache.</p>
+
+    <p>Der Podcast dokumentiert bürgerschaftliches Engagement für nachhaltige Stadtplanung und den Erhalt lokaler Ökosysteme.</p>
     </div>
     
 

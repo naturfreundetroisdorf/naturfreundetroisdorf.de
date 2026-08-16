@@ -8,10 +8,10 @@ include('layout/header.php');
 <main id="main">
   <div id="content">
     <div id="hero-text">
-      <h3>Wir, die Bürgerinitiative Naturfreunde Troisdorf, sind eine
-      überparteiliche Gruppe von Troisdorfer Bürgern,
-      die sich für den Schutz und den Erhalt des 'Spicher Waldes' einsetzen.</h3>
-      <p>Unser schönes Landschaftsschutzgebiet, an der östlichen Stadtgrenze von Troisdorf zur Wahner Heide, ist ein wertvolles Juwel und unverzichtbar für Mensch, Tier und Umwelt.</p>
+      <h3>Die Bürgerinitiative Naturfreunde Troisdorf engagiert sich für den Schutz und Erhalt des Spicher
+Waldes. Dieser wird bedroht durch den geplanten Ausbau der Deponiestraße als
+Umgehungsstraße und für den LKW Verkehr zum Industrigebiet. Ein solches Vorhaben würde das
+Naherholungsgebiet zerschneiden und zerstören.</h3>
     </div>
     <br>
 
