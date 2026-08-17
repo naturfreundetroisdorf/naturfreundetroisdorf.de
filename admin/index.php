@@ -281,12 +281,6 @@ $posts = $stmt->fetchAll();
         <div class="modal-content">
             <span class="modal-close" onclick="closeSortModal()">&times;</span>
             <h2>Reihenfolge bearbeiten</h2>
-            <div id="filterBtns" style="margin-bottom: 15px;">
-                <button onclick="filterByType('all')" class="filter-btn active">Alle</button>
-                <button onclick="filterByType('aktuell')" class="filter-btn">Aktuell</button>
-                <button onclick="filterByType('blog')" class="filter-btn">Blog</button>
-                <button onclick="filterByType('video')" class="filter-btn">Video</button>
-            </div>
             <ul id="sortableList" class="sortable-list"></ul>
             <button class="sort-btn confirm-btn" onclick="saveSortOrder()">✓ Bestätigen</button>
             <button class="sort-btn cancel-btn" onclick="closeSortModal()">✕ Abbrechen</button>
