@@ -29,13 +29,23 @@ include('layout/header.php');
     </div>
 
     <div class="roadmap-item done">
-        <span class="roadmap-text">Diverse Änderungen von Gerd</span>
-        <span class="roadmap-check">In Bearbeitung</span>
+        <span class="roadmap-text">Übergabe von info@</span>
+        <span class="roadmap-check"></span>
     </div>
 
     <div class="roadmap-item done">
-        <span class="roadmap-text">Diverse Änderungen von Sabine und Beate</span>
-        <span class="roadmap-check">In Bearbeitung</span>
+        <span class="roadmap-text">Podcast Beschreibung hinzufügen (wie in aktuell) + "Podcast" zu "Mediathek" umwandeln und die Playlists als dropdown unterpunkt verlinken</span>
+        <span class="roadmap-check">✔</span>
+    </div>
+
+    <div class="roadmap-item done">
+        <span class="roadmap-text">Bilder in Aktuell werden abgeschnitten - bitte voll anzeigen</span>
+        <span class="roadmap-check">✔</span>
+    </div>
+
+    <div class="roadmap-item done">
+        <span class="roadmap-text">Adminbereich: Aktuell Beiträge verschieben</span>
+        <span class="roadmap-check"></span>
     </div>
 
     <div class="roadmap-item done">

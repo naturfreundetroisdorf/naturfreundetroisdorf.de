@@ -8,10 +8,10 @@ include('layout/header.php');
 <main id="main">
   <div id="content">
     <div id="hero-text">
-      <h3>Wir, die Bürgerinitiative Naturfreunde Troisdorf, sind eine
-      überparteiliche Gruppe von Troisdorfer Bürgern,
-      die sich für den Schutz und den Erhalt des 'Spicher Waldes' einsetzen.</h3>
-      <p>Unser schönes Landschaftsschutzgebiet, an der östlichen Stadtgrenze von Troisdorf zur Wahner Heide, ist ein wertvolles Juwel und unverzichtbar für Mensch, Tier und Umwelt.</p>
+      <h3>Die Bürgerinitiative Naturfreunde Troisdorf engagiert sich für den Schutz und Erhalt des Spicher
+Waldes. Dieser wird bedroht durch den geplanten Ausbau der Deponiestraße als
+Umgehungsstraße und für den LKW Verkehr zum Industrigebiet. Ein solches Vorhaben würde das
+Naherholungsgebiet zerschneiden und zerstören.</h3>
     </div>
     <br>
 
@@ -41,13 +41,13 @@ include('layout/header.php');
       <h3>Hier die Fakten im Einzelnen:</h3>
 
       <h4>1. Die Giftmülldeponie SAD</h4>
-      <p>In unserem schönen Waldgebiet befindet sich, zum allgemeinen Leidwesen, seit vielen Jahrzehnten die SAD, eine 27 ha große Giftmülldeponie für mineralischen Sondermüll der Deponieklasse III. <a href="https://www.naturfreundetroisdorf.de/kopie-von-aktionen-1">weiterlesen</a></p>
+      <p>In unserem schönen Waldgebiet befindet sich, zum allgemeinen Leidwesen, seit vielen Jahrzehnten die SAD, eine 27 ha große Giftmülldeponie für mineralischen Sondermüll der Deponieklasse III. <a target= "_blank" href="https://www.naturfreundetroisdorf.de/kopie-von-aktionen-1">weiterlesen</a></p>
 
       <h4>2. Ehemaliger 'Schießstand Rottweil'</h4>
-      <p>Ende 2017 sind dort 3,6 ha Wald gerodet worden, um den bleiverseuchten Boden auszutauschen. Aus finanziellen Gründen sollen aber lediglich 2,6 ha wieder aufgeforstet werden. <a href="https://www.naturfreundetroisdorf.de/schiessplatz-rottweil">weiterlesen</a></p>
+      <p>Ende 2017 sind dort 3,6 ha Wald gerodet worden, um den bleiverseuchten Boden auszutauschen. Aus finanziellen Gründen sollen aber lediglich 2,6 ha wieder aufgeforstet werden. <a target= "_blank" href="https://www.naturfreundetroisdorf.de/schiessplatz-rottweil">weiterlesen</a></p>
 
       <h4>3. Geplanter Kletterwald auf den 'Spicher Höhen'</h4>
-      <p>In einem Waldgebiet von ungefähr 2 ha (Ecke Asselbachstrasse/Mauspfad) hat die Stadt Troisdorf einem Investor bereits vertraglich die Zusage zur Errichtung eines Kletterparks erteilt. Hierfür müssten viele Bäume gefällt werden... <a href="https://www.naturfreundetroisdorf.de/kletterwald">weiterlesen</a></p>
+      <p>In einem Waldgebiet von ungefähr 2 ha (Ecke Asselbachstrasse/Mauspfad) hat die Stadt Troisdorf einem Investor bereits vertraglich die Zusage zur Errichtung eines Kletterparks erteilt. Hierfür müssten viele Bäume gefällt werden... <a target= "_blank" href="https://www.naturfreundetroisdorf.de/kletterwald">weiterlesen</a></p>
     </div>
 
     <div id="cta">

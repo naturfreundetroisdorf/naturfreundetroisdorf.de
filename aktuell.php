@@ -9,7 +9,7 @@ $stmt = $pdo->query("
     SELECT *
     FROM " . POSTS_TABLE . "
     WHERE published = 1
-    ORDER BY pinned DESC, created_at DESC
+    ORDER BY sort_order ASC, pinned DESC, created_at DESC
 ");
 $posts = $stmt->fetchAll();
 ?>
