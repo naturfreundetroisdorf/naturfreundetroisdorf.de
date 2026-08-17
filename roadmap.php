@@ -35,7 +35,7 @@ include('layout/header.php');
 
     <div class="roadmap-item done">
         <span class="roadmap-text">Podcast Beschreibung hinzufügen (wie in aktuell) + "Podcast" zu "Mediathek" umwandeln und die Playlists als dropdown unterpunkt verlinken</span>
-        <span class="roadmap-check"></span>
+        <span class="roadmap-check">✔</span>
     </div>
 
     <div class="roadmap-item done">

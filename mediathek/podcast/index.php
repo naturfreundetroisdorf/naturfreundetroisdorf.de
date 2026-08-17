@@ -1,8 +1,9 @@
 <?php
 $pageTitle = "BI Naturfreunde Troisdorf – Aktionen";
-$currentPage = "podcast"; // Setzt das "Worum geht's?"-Item als aktiv
-include('../layout/head.php');
-include('../layout/header.php');
+$currentPage = "mediathek";
+include('../../layout/head.php');
+include('../../layout/header.php');
+
 ?>
 
 <main id="main">
@@ -80,4 +81,4 @@ setTimeout(function () {
 
 </main>
 
-<?php include('../layout/footer.php'); ?>
+<?php include('../../layout/footer.php'); ?>

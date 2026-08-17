@@ -11,7 +11,7 @@
       </div>
     </div>
     <div id="ticker">
-      <span id="ticker-inner">Wir bauen unsere Website gerade um! Manche Seiten sind aktuell noch leer oder unvollständig – das ändert sich in Kürze. Danke für eure Geduld.</span>
+      <span id="ticker-inner">Wir bauen unsere Website gerade um! Manche Seiten sind noch leer oder unvollständig – das ändert sich in Kürze. Danke für eure Geduld.</span>
     </div>
   </div>
   <nav id="navbar">
@@ -22,14 +22,15 @@
       <div class="nav-item <?php echo ($currentPage == 'index' ? 'active' : ''); ?>">
         <a href="<?php echo BASE_URL; ?>/index.php">Worum geht's?</a>
       </div>
+<!--      
       <div class="nav-item <?php echo ($currentPage == 'aktionen' ? 'active' : ''); ?>">
         <a href="<?php echo BASE_URL; ?>/aktionen">Bisherige Aktionen</a>
       </div>
-
+-->
       <div class="nav-item <?php echo ($currentPage == 'presse' ? 'active' : ''); ?>">
         <a>Pressebeiträge</a>
           <div class="dropdown">
-            <a target="_blank" href="https://www.ksta.de/region/rhein-sieg-bonn/troisdorf/troisdorf-mehrheit-bewilligt-geld-fuer-deponiestrasse-1271875">Troisdorf Mehrheit bewilligt Geld für Deponiestraße 1271875</a>
+            <a target="_blank" href="https://www.ksta.de/region/rhein-sieg-bonn/troisdorf/troisdorf-mehrheit-bewilligt-geld-fuer-deponiestrasse-1271875">Kölner Stadtanzeiger: Troisdorf Mehrheit bewilligt Geld für Deponiestraße 1271875</a>
           </div>
       </div>
 <!--
@@ -41,8 +42,14 @@
       <div class="nav-item <?php echo ($currentPage == 'wir' ? 'active' : ''); ?>">
         <a href="<?php echo BASE_URL; ?>/wir.php">Wer sind wir?</a>
       </div>
-      <div class="nav-item <?php echo ($currentPage == 'podcast' ? 'active' : ''); ?>">
-        <a href="<?php echo BASE_URL; ?>/podcast">Podcast</a>
+      <div class="nav-item <?php echo ($currentPage == 'mediathek' ? 'active' : ''); ?>">
+        <a>Mediathek</a>
+        <div class="dropdown">
+          <a href="<?php echo BASE_URL; ?>/mediathek/podcast">Podcast: Bürgerinitiative Naturfreunde Troisdorf - Schutz und Erhalt des Spicher Waldes</a>
+          <a target="_blank" href="https://www.youtube.com/playlist?list=PLJFS4TZME4vM">Youtube-Playlist: Öffentlichkeitsarbeit der Bürgerinitiative Naturfreunde Troisdorf</a>
+          <a target="_blank" href="https://www.youtube.com/playlist?list=PL0iOhirH6d08bSVvEOvPIC_QZgJUJV251">Youtube-Playlist: Schutz des Landschaftsschutz- und Naherholungsgebietes Spicher Wald</a>
+        </div>
+
       </div>
       <div class="nav-item <?php echo ($currentPage == 'kontakt' ? 'active' : ''); ?>">
         <a href="<?php echo BASE_URL; ?>/kontakt/impressum.php">Impressum</a>
