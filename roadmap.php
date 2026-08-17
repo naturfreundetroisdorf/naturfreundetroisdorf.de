@@ -40,7 +40,7 @@ include('layout/header.php');
 
     <div class="roadmap-item done">
         <span class="roadmap-text">Bilder in Aktuell werden abgeschnitten - bitte voll anzeigen</span>
-        <span class="roadmap-check"></span>
+        <span class="roadmap-check">✔</span>
     </div>
 
     <div class="roadmap-item done">
