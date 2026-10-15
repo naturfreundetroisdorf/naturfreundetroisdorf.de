@@ -30,7 +30,8 @@
       <div class="nav-item <?php echo ($currentPage == 'presse' ? 'active' : ''); ?>">
         <a>Pressebeiträge</a>
           <div class="dropdown">
-            <a target="_blank" href="https://www.ksta.de/region/rhein-sieg-bonn/troisdorf/troisdorf-mehrheit-bewilligt-geld-fuer-deponiestrasse-1271875">Kölner Stadtanzeiger: Troisdorf Mehrheit bewilligt Geld für Deponiestraße 1271875</a>
+            <a target="_blank" href="https://www.ksta.de/region/rhein-sieg-bonn/troisdorf/troisdorf-mehrheit-bewilligt-geld-fuer-deponiestrasse-1271875">Kölner Stadt-Anzeiger 04.05.2026 |  Mehrheit bewilligt Geld für Deponiestraße in Troisdorf</a>
+            <a target="_blank" href="presse/ga_Deponie_und_Deponiestra%C3%9Fe.pdf">General-Anzeiger Bonn 31.08.2026 | Troisdorf: Sondermülldeponie schließt nach 20 Jahren Protest</a>
           </div>
       </div>
 <!--
