@@ -20,6 +20,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = trim($_POST['content']);
     $image = $post['image'];
     $youtube = trim($_POST['youtube'] ?? '');
+    $pdf = $post['pdf'];
+    // PDF ersetzen oder entfernen (nur Blog)
+    if ($type === 'blog') {
+        try {
+            $newPdf = uploadPdf($_FILES['pdf']);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        if ($newPdf !== null) {
+            deleteUpload('pdf', $pdf);
+            $pdf = $newPdf;
+        } elseif (!empty($_POST['remove_pdf'])) {
+            deleteUpload('pdf', $pdf);
+            $pdf = null;
+        }
+    } else {
+        deleteUpload('pdf', $pdf);
+        $pdf = null;
+    }
     // Neues Bild hochladen
     if ($type === 'blog' && !empty($_FILES['image']['name'])) {
         // altes Bild löschen
@@ -48,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             title = ?,
             content = ?,
             image = ?,
+            pdf = ?,
             youtube_id = ?
         WHERE id = ?
     ");
@@ -56,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $title,
         $content,
         $image,
+        $pdf,
         $youtube,
         $id
     ]);
@@ -105,6 +126,19 @@ style="max-width:300px;">
 type="file"
 name="image"
 accept="image/*">
+</p>
+<?php if(!empty($post['pdf'])): ?>
+<p>
+Aktuelles PDF:
+<a href="<?php echo BASE_URL; ?>/uploads/pdf/<?= htmlspecialchars($post['pdf']) ?>" target="_blank" rel="noopener noreferrer">anzeigen</a>
+<label style="margin-left:15px;">
+<input type="checkbox" name="remove_pdf" value="1"> PDF entfernen
+</label>
+</p>
+<?php endif; ?>
+<p>
+<label>PDF <?= !empty($post['pdf']) ? 'ersetzen' : 'hinzufügen' ?> (optional, max. 20 MB)</label><br>
+<input type="file" name="pdf" accept="application/pdf,.pdf">
 </p>
 </div>
 <div id="youtube-box">

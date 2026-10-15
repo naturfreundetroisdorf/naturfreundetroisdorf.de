@@ -7,7 +7,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = trim($_POST['title']);
     $content = trim($_POST['content']);
     $image = null;
+    $pdf = null;
     $youtube = null;
+    // PDF hochladen (nur Blog, optional)
+    if ($type === 'blog') {
+        try {
+            $pdf = uploadPdf($_FILES['pdf']);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
     // Bild hochladen
     if ($type === 'blog' && !empty($_FILES['image']['name'])) {
         try {
@@ -29,10 +38,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             title,
             content,
             image,
+            pdf,
             youtube_id
         )
         VALUES
         (
+            ?,
             ?,
             ?,
             ?,
@@ -45,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $title,
         $content,
         $image,
+        $pdf,
         $youtube
     ]);
     header("Location: index.php");
@@ -77,6 +89,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <p>
 <label>Bild</label><br>
 <input type="file" name="image" accept="image/*">
+</p>
+<p>
+<label>PDF (optional, max. 20 MB) – erscheint als Link „zum Artikel“</label><br>
+<input type="file" name="pdf" accept="application/pdf,.pdf">
 </p>
 </div>
 <div id="youtube-box" style="display:none;">
