@@ -45,8 +45,21 @@ include('layout/header.php');
 
     <div class="roadmap-item done">
         <span class="roadmap-text">Adminbereich: Aktuell Beiträge verschieben</span>
+        <span class="roadmap-check">✔</span>
+    </div>
+
+    <div class="roadmap-item done">
+        <span class="roadmap-text">Logo von "Unser Wald, Unser Leben" befreien</span>
         <span class="roadmap-check"></span>
     </div>
+
+
+    <div class="roadmap-item done">
+        <span class="roadmap-text">Adminbereich: PDFs anbieten neben "Blog" und "Video"</span>
+        <span class="roadmap-check"></span>
+    </div>
+
+
 
     <div class="roadmap-item done">
         <span class="roadmap-text">Adminbereich für "Was sagt die Presse" damit unabhängig Artikel veröffentlicht werden können</span>
