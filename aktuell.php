@@ -40,7 +40,7 @@ $posts = $stmt->fetchAll();
           <a class="pdf-link"
              href="<?php echo BASE_URL; ?>/uploads/pdf/<?= htmlspecialchars($post['pdf']) ?>"
              target="_blank" rel="noopener noreferrer">
-              <svg class="pdf-icon" viewBox="0 0 24 30" aria-hidden="true">
+              <svg class="pdf-icon" width="28" height="34" viewBox="0 0 24 30" aria-hidden="true">
                   <path d="M2 0h14l8 8v20a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#fff" stroke="#bbb"/>
                   <path d="M0 2a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v5H0z" fill="#e2412d"/>
                   <text x="12" y="5.5" font-size="5" font-family="Arial,sans-serif" font-weight="bold" fill="#fff" text-anchor="middle">PDF</text>
