@@ -49,6 +49,58 @@ function uploadImage(array $file): ?string
     return $filename;
 }
 
+function uploadPdf(array $file): ?string
+{
+    if ($file['error'] === UPLOAD_ERR_NO_FILE) {
+        return null;
+    }
+
+    if ($file['error'] !== UPLOAD_ERR_OK) {
+        throw new Exception("Das PDF konnte nicht hochgeladen werden.");
+    }
+
+    // Maximale Dateigröße (20 MB)
+    if ($file['size'] > 20 * 1024 * 1024) {
+        throw new Exception("Das PDF darf maximal 20 MB groß sein.");
+    }
+
+    // Echten Dateityp prüfen (nicht der Endung oder dem Browser-MIME vertrauen)
+    $finfo = new finfo(FILEINFO_MIME_TYPE);
+    if ($finfo->file($file['tmp_name']) !== 'application/pdf') {
+        throw new Exception("Die Datei ist kein gültiges PDF.");
+    }
+
+    $filename = bin2hex(random_bytes(16)) . '.pdf';
+
+    $siteRootFs = realpath(__DIR__ . '/../..');
+    $destinationDir = $siteRootFs . '/uploads/pdf/';
+
+    if (!is_dir($destinationDir)) {
+        mkdir($destinationDir, 0755, true);
+    }
+
+    if (!move_uploaded_file($file['tmp_name'], $destinationDir . $filename)) {
+        throw new Exception("Das PDF konnte nicht gespeichert werden.");
+    }
+
+    return $filename;
+}
+
+// Löscht die zu einem Beitrag gehörende Datei (Bild oder PDF)
+function deletePostFile(?string $type, ?string $filename): void
+{
+    if (empty($filename)) {
+        return;
+    }
+
+    $subdir = $type === 'pdf' ? 'pdf' : 'images';
+    $file = realpath(__DIR__ . '/../..') . '/uploads/' . $subdir . '/' . basename($filename);
+
+    if (is_file($file)) {
+        unlink($file);
+    }
+}
+
 function formatContent($text)
 {
     // Platzhalter für manuelle Links

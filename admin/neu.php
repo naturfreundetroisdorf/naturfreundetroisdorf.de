@@ -15,6 +15,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } catch (Exception $e) {
             die($e->getMessage());
         }    }
+    // PDF hochladen (Dateiname wird wie das Bild im Feld "image" gespeichert)
+    if ($type === 'pdf') {
+        try {
+            $image = uploadPdf($_FILES['pdf']);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        if ($image === null) {
+            die('Bitte eine PDF-Datei auswählen.');
+        }
+    }
     // Youtube-ID speichern
     if ($type === 'video') {
     $youtube = extractYoutubeId($_POST['youtube']);
@@ -67,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <select name="type" id="type">
 <option value="blog">Blog</option>
 <option value="video">Video</option>
+<option value="pdf">PDF</option>
 </select>
 </p>
 <p>
@@ -77,6 +89,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <p>
 <label>Bild</label><br>
 <input type="file" name="image" accept="image/*">
+</p>
+</div>
+<div id="pdf-box" style="display:none;">
+<p>
+<label>PDF-Datei (max. 20 MB)</label><br>
+<input type="file" name="pdf" accept="application/pdf,.pdf">
 </p>
 </div>
 <div id="youtube-box" style="display:none;">
@@ -103,14 +121,11 @@ Abbrechen
 const type = document.getElementById('type');
 const imageBox = document.getElementById('image-box');
 const youtubeBox = document.getElementById('youtube-box');
+const pdfBox = document.getElementById('pdf-box');
 type.addEventListener('change', function(){
-    if(this.value === 'blog'){
-        imageBox.style.display = 'block';
-        youtubeBox.style.display = 'none';
-    }else{
-        imageBox.style.display = 'none';
-        youtubeBox.style.display = 'block';
-    }
+    imageBox.style.display = this.value === 'blog' ? 'block' : 'none';
+    youtubeBox.style.display = this.value === 'video' ? 'block' : 'none';
+    pdfBox.style.display = this.value === 'pdf' ? 'block' : 'none';
 });
 </script>
 </body>

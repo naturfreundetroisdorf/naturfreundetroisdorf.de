@@ -20,6 +20,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = trim($_POST['content']);
     $image = $post['image'];
     $youtube = trim($_POST['youtube'] ?? '');
+    // Beitragsart gewechselt: die alte Datei (Bild/PDF) passt nicht mehr
+    if ($type !== $post['type'] && !empty($image)) {
+        deletePostFile($post['type'], $image);
+        $image = null;
+    }
+    // Neues PDF hochladen
+    if ($type === 'pdf') {
+        try {
+            $newPdf = uploadPdf($_FILES['pdf']);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        if ($newPdf !== null) {
+            deletePostFile('pdf', $image);
+            $image = $newPdf;
+        }
+        if (empty($image)) {
+            die('Bitte eine PDF-Datei auswählen.');
+        }
+    }
     // Neues Bild hochladen
     if ($type === 'blog' && !empty($_FILES['image']['name'])) {
         // altes Bild löschen
@@ -79,6 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <select name="type" id="type">
 <option value="blog" <?= $post['type']=="blog" ? "selected" : "" ?>>Blog</option>
 <option value="video" <?= $post['type']=="video" ? "selected" : "" ?>>Video</option>
+<option value="pdf" <?= $post['type']=="pdf" ? "selected" : "" ?>>PDF</option>
 </select>
 </p>
 <p>
@@ -90,7 +111,7 @@ value="<?= htmlspecialchars($post['title']) ?>"
 required>
 </p>
 <div id="image-box">
-<?php if(!empty($post['image'])): ?>
+<?php if(!empty($post['image']) && $post['type'] === 'blog'): ?>
 <p>
 Aktuelles Bild
 <br><br>
@@ -105,6 +126,20 @@ style="max-width:300px;">
 type="file"
 name="image"
 accept="image/*">
+</p>
+</div>
+<div id="pdf-box">
+<?php if(!empty($post['image']) && $post['type'] === 'pdf'): ?>
+<p>
+Aktuelles PDF:
+<a href="<?php echo BASE_URL; ?>/uploads/pdf/<?= htmlspecialchars($post['image']) ?>" target="_blank" rel="noopener noreferrer">
+anzeigen
+</a>
+</p>
+<?php endif; ?>
+<p>
+<label>Neues PDF auswählen (max. 20 MB)</label><br>
+<input type="file" name="pdf" accept="application/pdf,.pdf">
 </p>
 </div>
 <div id="youtube-box">
@@ -136,14 +171,11 @@ Abbrechen
 const type=document.getElementById('type');
 const image=document.getElementById('image-box');
 const youtube=document.getElementById('youtube-box');
+const pdf=document.getElementById('pdf-box');
 function updateForm(){
-    if(type.value==="blog"){
-        image.style.display="block";
-        youtube.style.display="none";
-    }else{
-        image.style.display="none";
-        youtube.style.display="block";
-    }
+    image.style.display=type.value==="blog"?"block":"none";
+    youtube.style.display=type.value==="video"?"block":"none";
+    pdf.style.display=type.value==="pdf"?"block":"none";
 }
 type.addEventListener("change",updateForm);
 updateForm();

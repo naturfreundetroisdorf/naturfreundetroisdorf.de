@@ -47,6 +47,14 @@ $posts = $stmt->fetchAll();
       <small>
           <?= date('d.m.Y', strtotime($post['created_at'])) ?>
       </small>
+      <?php if($post['type'] === 'pdf' && !empty($post['image'])): ?>
+          <p>
+              <a href="<?php echo BASE_URL; ?>/uploads/pdf/<?= htmlspecialchars($post['image']) ?>"
+                 target="_blank" rel="noopener noreferrer">
+                  📄 PDF öffnen
+              </a>
+          </p>
+      <?php endif; ?>
       <p><?= formatContent($post['content']) ?></p>
   </div>
   <hr class="divider">
