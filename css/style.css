@@ -645,6 +645,27 @@ opacity: 0.3;
 
 }
 
+.pdf-link{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    margin:0 0 20px;
+    font-size:14px;
+    font-weight:bold;
+    color:var(--wald);
+    text-decoration:none;
+}
+
+.pdf-link:hover span{
+    text-decoration:underline;
+}
+
+.pdf-icon{
+    width:28px;
+    height:34px;
+}
+
 .video-wrapper{
 
     position:relative;
